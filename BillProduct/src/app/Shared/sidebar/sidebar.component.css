@@ -1,0 +1,23 @@
+.example-container {
+    /* width: 10px; */
+    height: 500px;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  }
+  
+  .example-sidenav-content {
+    width: 100px;
+    height: 100%;
+    margin-left: 1px;
+ align-items: center;
+    justify-content: center; 
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+
+  } 
+ .mat-icon {
+    vertical-align: middle;
+    margin-right:1px;
+}
+

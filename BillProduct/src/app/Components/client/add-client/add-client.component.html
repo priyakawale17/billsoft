@@ -1,0 +1,122 @@
+<!-- <p>add-client works!</p> -->
+<form [formGroup]="clientData" (ngSubmit)="addClientFunction()" >
+<mat-tab-group>
+    <mat-tab label="Client Details">
+        <div fxLayout="column" >
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" >
+                <div fxLayout="column" fxFlex="33" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>clientName</mat-label>
+                        <input matInput formControlName="clientName" ngModel placeholder="clientName">
+                    </mat-form-field>
+
+                </div>
+                <div fxLayout="column" fxFlex="33" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput formControlName="ContactNo" ngModel placeholder="Contact Number">
+                    </mat-form-field>
+
+                </div>
+                <!-- <div fxLayout="column" fxFlex="33" style="border: 1px solid black;">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Input</mat-label>
+                        <input matInput placeholder="Input">
+                    </mat-form-field>
+
+                </div> 
+                <div fxLayout="column" fxFlex="33" style="border: 1px solid black;">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Input</mat-label>
+                        <input matInput placeholder="Input">
+                    </mat-form-field>
+
+                </div> -->
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="33" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>PartiesGrouId</mat-label>
+                        <input matInput formControlName="PartiesGrouId" ngModel placeholder="PartiesGrouId">
+                    </mat-form-field>
+
+                </div>    
+                <div fxLayout="column" fxFlex="33" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>State Id</mat-label>
+                        <input matInput formControlName="StateId" ngModel placeholder="State Id">
+                    </mat-form-field>
+
+                </div>    
+                <div fxLayout="column" fxFlex="33" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>CityId</mat-label>
+                        <input matInput formControlName="CityId" ngModel placeholder="CityId">
+                    </mat-form-field>
+
+                </div>              
+
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="100%" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="Address" ngModel placeholder="Address">
+                    </mat-form-field>
+                </div>        
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="33" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email Id</mat-label>
+                        <input matInput formControlName="EmailId" ngModel placeholder="Email">
+                    </mat-form-field>
+                </div> 
+                <div fxLayout="column" fxFlex="33" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>Alternative Contact Number </mat-label>
+                        <input matInput formControlName="AltContactNo" placeholder="Input">
+                    </mat-form-field>
+                </div>  
+
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>Opening Balance</mat-label>
+                        <input matInput formControlName="OpeningBalance" ngModel placeholder="opening Balance">
+                    </mat-form-field>
+                </div> 
+                <div fxLayout="column" fxFlex="50" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>Opening Balance date</mat-label>
+                        <input matInput formControlName="OpeningBalanceDate" ngModel placeholder="Opening Balance date">
+                    </mat-form-field>
+                </div>  
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>BranchId</mat-label>
+                        <input matInput formControlName="BranchId" ngModel placeholder="BranchId">
+                    </mat-form-field>
+                </div> 
+                <div fxLayout="column" fxFlex="50" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>Parties Type</mat-label>
+                        <input matInput formControlName="PartiesType" ngModel placeholder="Parties Type">
+                    </mat-form-field>
+                </div>  
+            </div>
+        </div>
+
+    </mat-tab>
+    <!-- <mat-tab label="B">Banana</mat-tab>
+    <mat-tab label="C">Fruits</mat-tab> -->
+
+</mat-tab-group>
+
+<button mat-raised-button color="primary">Save</button>
+</form>
+<br>
+<br>

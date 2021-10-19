@@ -1,0 +1,183 @@
+<!-- <p>add-product works!</p> -->
+
+<form [formGroup]="userData" (ngSubmit)="addProductFunction()">
+<mat-tab-group animationDuration="0ms">
+    <mat-tab label=" Product Details" >
+        <div fxLayout="column" class="addItem" style="margin:20px">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Product Name</mat-label>
+                        <input matInput formControlName="ProductName" ngModel placeholder="Product Name">
+                      </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>HSN No</mat-label>
+                        <input matInput formControlName="hsn" ngModel placeholder="ProductCode">
+                      </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Product Code </mat-label>
+                        <input matInput formControlName="ProductCode" ngModel placeholder="ProductCategoryId ">
+                      </mat-form-field>
+                </div>
+            </div>
+            <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select Student type</mat-label>
+                        <mat-select name="Student Type">
+                            <mat-option value="Select Student type"></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Date Of Birth</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Place Of Birth</mat-label>
+                        <input matInput placeholder="Place Of Birth">
+                      </mat-form-field>
+                </div>
+            </div> -->
+
+            <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="100">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Date Of Birth In Words</mat-label>
+                        <input matInput placeholder="Date Of Birth In Words">
+                    </mat-form-field>
+                </div>
+            </div> -->
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>UnitOfMesurementId</mat-label>
+                        <input matInput formControlName="UnitOfMesurementId" ngModel placeholder="UnitOfMesurementId">
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>ProductCategoryId</mat-label>
+                        <input matInput formControlName="ProductCategoryId" ngModel placeholder="HSNNo">
+                    </mat-form-field>
+                </div>
+            </div>
+            <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select Gender</mat-label>
+                        <mat-select name="Student Type">
+                            <mat-option value="Select Student type"></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select Religion</mat-label>
+                        <mat-select name="Student Type">
+                            <mat-option value="Select Student type"></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div> -->
+            <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select Cast Category</mat-label>
+                        <mat-select name="Student Type">
+                            <mat-option value="Select Student type"></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sub Cast</mat-label>
+                        <input matInput placeholder="Sub Cast">
+                      </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="33">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mother Tongue</mat-label>
+                        <input matInput placeholder="Mother Tongue">
+                      </mat-form-field>
+                </div>
+            </div> -->
+            <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select Standard</mat-label>
+                        <mat-select name="Student Type">
+                            <mat-option value="Select Student type"></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select division</mat-label>
+                        <mat-select name="Student Type">
+                            <mat-option value="Select Student type"></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div> -->
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Companies Id</mat-label>
+                        <input matInput formControlName="CompaniesId" ngModel placeholder="Sub Cas">
+                      </mat-form-field>
+                </div>
+            </div>
+            <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select Bus</mat-label>
+                        <mat-select name="Student Type">
+                            <mat-option value="Select Student type"></mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Saral Id</mat-label>
+                        <input matInput placeholder="Sub Cas">
+                      </mat-form-field>
+                </div>
+            </div> -->
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>GST id</mat-label>
+                        <input matInput formControlName="Companies" ngModel placeholder="Sub Cas">
+                      </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Add Date</mat-label>
+                        <input matInput formControlName="Date" ngModel [matDatepicker]="AdDate">
+                        <mat-datepicker-toggle matSuffix [for]="AdDate"></mat-datepicker-toggle>
+                        <mat-datepicker #AdDate></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                <button mat-raised-button color="primary">Save</button>
+            </div>
+        </div>   
+    </mat-tab>
+
+ 
+    
+ 
+  </mat-tab-group>
+</form>
