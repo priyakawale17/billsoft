@@ -50,6 +50,18 @@ app.get('/getProduct',function(req,res ){
         }
     })
 })
+app.get('/getClientProduct',function(req,res ){
+    let sql ="select * from tblclientproduct";
+    connection.query(sql,function(err,data){
+        if(err){
+            console.log(err)
+        }
+        else{
+            console.log(data)
+            res.send(data)
+        }
+    })
+})
 app.post('/addProduct',function(req,res ){
     console.log(req.body)
     ProductCategoryId=req.body.ProductCategoryId;
@@ -60,10 +72,6 @@ app.post('/addProduct',function(req,res ){
     Companies= req.body.Companies;
     date=req.body.Date;
     hsn= req.body.hsn;
-
-
-
-
     // let sql ="select * from tblproduct";
     // connection.query(sql,function(err,data){
     //     if(err){
@@ -76,6 +84,32 @@ app.post('/addProduct',function(req,res ){
     // })
     let sql = "INSERT INTO `tblproduct` (`ProductId`,`ProductName`, `HSNNo`,`ProductCode`,`UnitOfMesurementId`, `ProductCategoriesId`, `GSTId`,`CompaniesId`, `CreatedDate`, `CreatedBy`,`ModifiedDate`,`ModifiedBy`,`IsActive`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);"
     connection.query(sql,[null,ProductName,hsn,ProductCode,UnitOfMesurementId,ProductCategoryId,Companies,CompaniesId,null,null,null,null,null]),function(err,data){
+        if(err){
+            console.log(err)
+        }else{
+            console.log(data)
+        }
+    }
+})
+app.post('/addClient',function(req,res ){
+    console.log(req.body)
+
+    clientName=req.body.clientName;
+    ContactNo=req.body.ContactNo;
+    PartiesGrouId =req.body.PartiesGrouId;
+    StateId=req.body.StateId;
+    CityId=req.body.CityId;
+    Address= req.body.Address;
+    EmailId=req.body.EmailId;
+    AltContactNo= req.body.AltContactNo;
+    Pincode=req.body.Pincode;
+    OpeningBalance =req.body.OpeningBalance;
+    OpeningBalanceDate=req.body.OpeningBalanceDate;
+    BranchId=req.body.BranchId;
+    PartiesType= req.body.PartiesType;
+
+    let sql = "INSERT INTO `tblclient` (`ClientId`,`Name`, `ContactNo`,`AltContactNo`,`PartiesGroupId`, `StateId`, `CityId`,`PinCode`,`Address`,`EmailId`,`OpeningBal`,`OpeningBalDate`,`BranchId`,`PartiesType`, `CreatedDate`, `CreatedBy`,`ModifyDate`,`ModifyBy`,`IsActive`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);"
+    connection.query(sql,[null,clientName,ContactNo,AltContactNo,PartiesGrouId,StateId,CityId,Pincode,Address,EmailId,OpeningBalance,OpeningBalanceDate,BranchId,PartiesType,null,null,null,null,null]),function(err,data){
         if(err){
             console.log(err)
         }else{

@@ -26,6 +26,7 @@ export class AddClientComponent implements OnInit {
     OpeningBalanceDate: new FormControl(''),
     BranchId : new FormControl(''),
     PartiesType: new FormControl(''),
+    Pincode: new FormControl('')
 
   })
   addClientFunction(){

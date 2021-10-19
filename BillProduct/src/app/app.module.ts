@@ -12,11 +12,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+// import { ClientProductComponent } from './Components/client-product/client-product.component';
+// import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
+  
     
  
    

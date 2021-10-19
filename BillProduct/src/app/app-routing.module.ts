@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { ClientProductComponent } from './Components/client-product/client-product.component';
 import { AddClientComponent } from './Components/client/add-client/add-client.component';
 import { ClientComponent } from './Components/client/client.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { AddProductComponent } from './Components/Products/add-product/add-product.component';
 import { ProductListComponent } from './Components/Products/product-list/product-list.component';
 import { DefaultComponent } from './layout/default/default.component';
@@ -13,7 +15,7 @@ const routes: Routes = [{
   component:DefaultComponent,
   children:[{
     path:'',
-    component:AppComponent
+    component:DashboardComponent
   },
   {
     path:'client',
@@ -30,6 +32,10 @@ const routes: Routes = [{
   {
     path:'addClient',
     component:AddClientComponent
+  },
+  {
+    path:'ClientProduct',
+    component:ClientProductComponent
   }
 
 ]

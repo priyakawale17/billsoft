@@ -1,0 +1,21 @@
+<!-- <p>client-product works!</p> -->
+<div fxLayout="column"  >
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+        <div fxLayout="column" fxFlex="33">
+            <mat-form-field appearance="outline">
+                <!-- <mat-label>Client DropDown</mat-label> -->
+                <mat-select value="selected" >
+                    <mat-option *ngFor="let Client of ClientList" [value]="Client.Name">{{Client.Name}} </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div fxLayout="column" fxFlex="33">
+            <mat-form-field appearance="outline">
+                <!-- <mat-label>Client DropDown</mat-label> -->
+                <mat-select value="selected" >
+                    <mat-option *ngFor="let Product of ProductList" [value]="Product.ProductName">{{Product.ProductName}} </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

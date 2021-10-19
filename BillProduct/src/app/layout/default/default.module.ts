@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultComponent } from './default.component';
 import { SharedModule } from 'src/app/Shared/shared.module';
+import { DashboardComponent } from 'src/app/Components/dashboard/dashboard.component';
 // import { HeaderComponent } from 'src/app/Shared/header/header.component';
 // import { FooterComponent } from 'src/app/Shared/footer/footer.component';
 // import { SidebarComponent } from 'src/app/Shared/sidebar/sidebar.component';
@@ -27,6 +28,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule} from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from 'src/app/Components/Products/add-product/add-product.component';
+import { ClientProductComponent } from 'src/app/Components/client-product/client-product.component';
 // import {MatTableDataSource} from '@angular/material/table';
 // import {MatSort} from '@angular/material/sort';
 
@@ -41,7 +43,9 @@ import { AddProductComponent } from 'src/app/Components/Products/add-product/add
     ProductListComponent,
     ClientComponent,
     AddProductComponent,
-    AddClientComponent
+    AddClientComponent,
+    DashboardComponent,
+    ClientProductComponent
   
    
   ],
